@@ -29,11 +29,22 @@ let player2 = document.getElementById("player2");
 let currPlayer = document.getElementById("currentPlayer");
 let turnText = document.getElementById("turnText");
 
-
 let emojis = document.getElementsByClassName("em");
 // console.log(emojis);
 
 let playerArr = [player1, player2];
+
+function checkPlayer(p1,p2){
+    Array.from(emojis).forEach((e)=>{
+        if (e.getAttribute('src')==p1.getAttribute('src') || e.getAttribute('src')==p2.getAttribute('src')){
+            e.setAttribute('style','opacity:0.3;z-index:-2;')
+        }
+        else{
+            e.setAttribute('style','opacity:1;z-index:1;')
+        }
+    });
+}
+checkPlayer(player1,player2);
 
 Array.from(emojis).forEach((e) => {
     e.addEventListener("click", () => {
@@ -42,6 +53,8 @@ Array.from(emojis).forEach((e) => {
         playerArr.push(e);
         player1 = playerArr[playerArr.length - 1];
         player2 = playerArr[playerArr.length - 2];
+        checkPlayer(player1, player2);
+
         document.getElementById('player1').setAttribute(('src'), player1.getAttribute('src'));
         document.getElementById('player2').setAttribute(('src'), player2.getAttribute('src'));
         // console.log(player1, player2);
