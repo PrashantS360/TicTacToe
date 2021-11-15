@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <h1>Tic Tac Toe</h1>
+        <div class="options">
+            <ul class="gameControl">
+                <li id="players">Players</li>
+                <li><img src="unmute.png" alt="" width="50%" style="filter: invert(1);" id="sound"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="gameContainer">
+            <div class="row">
+                <div class="box-1 box"><img src="" alt="" width="90%"></div>
+                <div class="box-2 box"><img src="" alt="" width="90%"></div>
+                <div class="box-3 box"><img src="" alt="" width="90%"></div>
+            </div>
+            <div class="row">
+                <div class="box-4 box"><img src="" alt="" width="90%"></div>
+                <div class="box-5 box"><img src="" alt="" width="90%"></div>
+                <div class="box-6 box"><img src="" alt="" width="90%"></div>
+            </div>
+            <div class="row">
+                <div class="box-7 box"><img src="" alt="" width="90%"></div>
+                <div class="box-8 box"><img src="" alt="" width="90%"></div>
+                <div class="box-9 box"><img src="" alt="" width="90%"></div>
+            </div>
+        </div>
+        
+        <div class="turn">
+            <div>
+                <img src="" alt="" id="currentPlayer">
+                <h2 id="turnText"></h2>
+            </div>
+            <button class="btn btn-success" id="reset">Reset</button>
+            <img src="excited.gif" alt="" id="excited">
+        </div>
+        
+        <div id="emojiContainer">
+            <div class="row emoji" >
+                <img src="emojis/0.png" alt="" class="em"  width="20%">
+                <img src="emojis/1.png" alt="" class="em"  width="20%">
+                <img src="emojis/2.png" alt="" class="em"  width="20%">
+                <div class=" pstate" style="text-align: center; width: 40%;float:right">Selected Players</div>
+            </div>
+            <div class="row emoji" >
+                <img src="emojis/3.png" alt="" class="em"  width="20%">
+                <img src="emojis/4.png" alt="" class="em"  width="20%">
+                <img src="emojis/5.png" alt="" class="em"  width="20%">
+                <div class="player-1 pstate">Player-1</div>
+            </div>
+            <div class="row emoji" >
+                <img src="emojis/6.png" alt="" class="em"  width="20%">
+                <img src="emojis/7.png" alt="" class="em"  width="20%">
+                <img src="emojis/8.png" alt="" class="em"  width="20%">
+                <img src="emojis/0.png" alt="" class="pstate" width="10%" id="player1">
+            </div>
+            <div class="row emoji" >
+                <img src="emojis/9.png" alt="" class="em"  width="20%">
+                <img src="emojis/10.png" alt="" class="em"  width="20%">
+                <img src="emojis/11.png" alt="" class="em"  width="20%">
+                <div class="player-2 pstate">Player-2</div>
+            </div>
+            <div class="row emoji" >
+                <img src="emojis/12.png" alt="" class="em"  width="20%">
+                <img src="emojis/13.png" alt="" class="em"  width="20%">
+                <img src="emojis/14.png" alt="" class="em"  width="20%">
+                <img src="emojis/1.png" alt="" class="pstate" width="10%" id="player2">
+            </div>
+            <!-- <div class="row">
+                <button class="btn btn-success">Save</button>
+                <button class="btn btn-danger">Discard</button>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
